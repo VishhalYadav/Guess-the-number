@@ -1,14 +1,18 @@
 "use strict";
-let randomNum = Math.trunc(Math.random() * 50 + 1);
+// Selecting elements
 const dislayNum = document.querySelector(".number");
 const btnCheck = document.querySelector(".check");
 const displayMessage = document.querySelector(".message");
 const btnAgain = document.querySelector(".again");
 
-document.querySelector(".number").textContent = randomNum;
+// Generating Random number from 1 to 50.
+let randomNum = Math.trunc(Math.random() * 50 + 1);
+
+// Initializing score and high score.
 let score = 20;
 let highScore = 0;
 
+// Evaluating the entered number.
 btnCheck.addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   if (score > 1) {
@@ -38,6 +42,7 @@ btnCheck.addEventListener("click", function () {
   }
 });
 
+// Functioning of Again Btn
 btnAgain.addEventListener("click", function () {
   randomNum = Math.trunc(Math.random() * 50 + 1);
   document.querySelector("body").classList.remove("win");
