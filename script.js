@@ -5,7 +5,7 @@ const btnCheck = document.querySelector(".check");
 const displayMessage = document.querySelector(".message");
 const btnAgain = document.querySelector(".again");
 
-document.querySelector(".number").textContent = randomNum;
+
 let score = 20;
 let highScore = 0;
 
